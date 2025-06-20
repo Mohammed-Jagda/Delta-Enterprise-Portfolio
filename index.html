@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Delta Enterprise | Product Portfolio</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #1f1f1f;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0px; /* adjust to control spacing between logo and text */
+  flex-wrap: wrap;
+}
+
+.header-text h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+.header-text p {
+  margin: 5px 0 0;
+  font-size: 1em;
+}
+
+
+    header, footer {
+     background-color:#121212;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+
+
+    h1, h2 {
+      color: #ff6f00;
+    }
+
+    .section {
+      padding: 10px 20px;
+      border-bottom: 1px solid #444;
+      text-align: center;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .product {
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease-in-out, background-color 0.3s;
+    }
+
+    .product:hover {
+      transform: scale(1.05);
+      background-color: #3a3a3a;
+    }
+
+    .product img {
+      width: 100%;
+      height: 160px;
+      object-fit: contain;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      background-color: #f5f5f5fc;
+      /*background: #fff;*/
+    }
+
+    .product h3 {
+      margin: 10px 0 5px;
+      color: #f9a825;
+    }
+
+    .product p {
+      font-size: 0.9em;
+      color: #ccc;
+    }
+
+    footer p {
+      color: #bbb;
+    }
+
+@media print {
+  body {
+    background: #fff;
+    color: #000;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    background: #fff !important;
+    color: #000 !important;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+    /*gap: 0px;*/
+    page-break-after: avoid;
+  }
+
+  .header-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    text-align: center;
+  }
+
+   .header-content img {
+    height: 75px;
+    width: 135px;
+    margin: 0;
+  }
+
+  .header-text h1 {
+    font-size: 25px !important;
+    color: #ff6f00 !important;
+    margin: 0;
+  }
+
+  .header-text p {
+    font-size: 15px;
+    color: #000;
+    margin: 2px 0 0;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 20px;
+    color: #000;
+    margin: 12px 0 6px;
+    page-break-after: avoid;
+  }
+  .section {
+    page-break-inside: avoid;
+    margin-bottom: 20px;
+  }
+
+  .products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+  }
+
+  .product {
+    background: none !important;
+    box-shadow: none !important;
+    padding: 0;
+    page-break-inside: avoid;
+    text-align: center;
+  }
+
+  .product img {
+    background-color: #f2f2f2 !important;
+    padding: 2px;
+    border-radius: 4px;
+    max-height: 120px;
+    object-fit: contain;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .product h3 {
+    font-size: 15px;
+    margin: 4px 0;
+    color: #000;
+  }
+
+  .product p {
+    font-size: 13px;
+    margin: 0 0 10px 0;
+    color: #000;
+  }
+
+  footer {
+    display: none !important;
+  }
+
+  .print-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 14px;
+    background: #fff;
+    color: #000;
+    text-align: center;
+    font-size: 11px;
+    border-top: 1px solid #ccc;
+    padding-top: 4px;
+    z-index: 9999;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+   .no-print {
+    display: none !important;
+  }
+   
+  h4 {
+    color: #000000;
+  }
+ p {
+  display: none;
+ }
+}
+
+
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-content">
+    <img src="images/DeltaLogo.png" alt="Delta Logo" height="120" width="220">
+    <div class="header-text">
+      <h1>Delta Enterprise</h1>
+      <h4 style="color: #fff;">Valves and Valve Parts | Industrial Tools | Welding Consumables | Fittings & More</h4>
+    </div>
+  </div>
+</header>
+
+<section class="section no-print" id="about-us">
+  <h2>About Us</h2>
+  <p>
+    <strong>Delta Enterprise</strong> is a trusted supplier of high-quality industrial solutions, specializing in
+    Iron & Steel products, Welding Consumables, Industrial Tools, and Valves & Valve Parts. With years of experience
+    in the field, we are committed to delivering reliable products that meet the highest standards of performance,
+    durability, and safety.
+  </p>
+  <p>
+    Our diverse product portfolio is carefully curated to serve a wide range of industries including oil & gas,
+    water treatment, power generation, chemical processing, construction, and heavy engineering. We partner with
+    renowned manufacturers to ensure timely delivery, competitive pricing, and exceptional after-sales support.
+  </p>
+  <p>
+    At Delta Enterprise, our mission is to provide precision-engineered components that help our clients build,
+    maintain, and operate efficiently. Whether you're looking for robust fasteners, precision machined fittings,
+    or custom solutions — we are here to deliver excellence.
+  </p>
+</section>
+
+
+
+<section class="section">
+  <h2>Valves & Valve Parts</h2>
+  <div class="products">
+    <div class="product">
+      <img src="images/Ball.png" alt="Ball Valve">
+      <h3>Ball Valve</h3>
+      <p>High-performance valve for flow control in pipelines. Used in oil & gas, water treatment.</p>
+    </div>
+    <div class="product">
+      <img src="images/Globe.png" alt="Globe Valve">
+      <h3>Globe Valve</h3>
+      <p>For throttling flow and regulating pressure. Used in power and chemical industries.</p>
+    </div>
+    <div class="product">
+      <img src="images/Gate.png" alt="Gate Valve">
+      <h3>Gate Valve</h3>
+      <p>Opens or closes flow in pipelines. Common in oil & gas, water treatment networks.</p>
+    </div>
+    <div class="product">
+      <img src="images/Check.png" alt="Check Valve">
+      <h3>Check Valve</h3>
+      <p>Prevents backflow in pipelines. Ideal for water, oil, and gas systems.</p>
+    </div>
+    <div class="product">
+      <img src="images/Butterfly.png" alt="Butterfly Valve">
+      <h3>Butterfly Valve</h3>
+      <p>Quick shutoff valve with low pressure drop. Common in HVAC and irrigation systems.</p>
+    </div>
+    <div class="product">
+      <img src="images/Leever.png" alt="Lever & Sleeves">
+      <h3>Lever & Sleeves</h3>
+      <p>Durable handle covers used in manual valves for grip and safety.</p>
+    </div>
+     <div class="product">
+      <img src="images/Stem.jpeg" alt="Valve Stem">
+      <h3>Valve Stem</h3>
+      <p>Valve stems are crucial components in various systems, primarily serving to control the flow of fluids or gases.</p>
+    </div>
+     <div class="product">
+      <img src="images/Seats.jpg" alt="Valve Seats">
+      <h3>Valve Seats</h3>
+      <p>A valve seat is a crucial component in many types of valves, including those found in engines and other fluid control systems.</p>
+    </div>
+    <div class="product">
+      <img src="images/Tag.png" alt="Tag Plates">
+      <h3>Tag Plates</h3>
+      <p>Identification plates for equipment, machinery, and pipelines. Customizable.</p>
+    </div>
+    <div class="product">
+      <img src="images/Endcap.png" alt="Plastic End Caps">
+      <h3>Plastic End Caps</h3>
+      <p>Protective closures for pipes, rods, and tubing during storage or transport.</p>
+    </div>
+    <div class="product">
+      <img src="images/Handwheel.png" alt="Handwheels">
+      <h3>Handwheels</h3>
+      <p>Manual operating wheels used in machinery for position adjustments.</p>
+    </div>
+    <div class="product">
+      <img src="images/PTFE.png" alt="PTFE Rings">
+      <h3>PTFE Rings</h3>
+      <p>Chemical-resistant sealing rings used in pumps, valves, and heat exchangers.</p>
+    </div>
+    <div class="product">
+      <img src="images/RPTFE.png" alt="RPTFE Rings">
+      <h3>RPTFE Rings</h3>
+      <p>Reinforced PTFE rings for enhanced strength in high-pressure environments.</p>
+    </div>
+    <div class="product">
+      <img src="images/Devlon.png" alt="Devlon Rings">
+      <h3>Devlon Rings</h3>
+      <p>High-load plastic seals used in marine, oil, and gas sectors.</p>
+    </div>
+    <div class="product">
+      <img src="images/PEEK.png" alt="Peek Rings">
+      <h3>Peek Rings</h3>
+      <p>High-performance plastic seals for extreme temperature and pressure systems.</p>
+    </div>
+    <div class="product">
+      <img src="images/SS316.png" alt="SS 316 Rings">
+      <h3>SS 316 Rings</h3>
+      <p>Stainless steel sealing rings with corrosion resistance for industrial sealing.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Flanges & Fittings</h2>
+  <div class="products">
+    <div class="product">
+      <img src="images/Flanges.png" alt="Flanges">
+      <h3>Flanges</h3>
+      <p> Mechanical components used to connect pipes, valves, pumps, and other equipments.</p>
+    </div>
+   <div class="product">
+      <img src="images/RTJ.png" alt="RTJ Rings">
+      <h3>RTJ Rings</h3>
+      <p>Ring-Type Joints for high-pressure pipe flanges in oil & gas plants.</p>
+    </div>
+     <div class="product">
+      <img src="images/Flange.png" alt="Packing Flange">
+      <h3>Packing Flange</h3>
+      <p>Supports sealing and alignment of rotating equipment in pumps and valves.</p>
+    </div>
+   <div class="product">
+      <img src="images/Hex.png" alt="Hex Nipples">
+      <h3>Hex Nipples</h3>
+      <p>Pipe fitting for secure connection between threaded components in industrial piping.</p>
+    </div>
+     <div class="product">
+      <img src="images/Hose.png" alt="Fitting House">
+      <h3>Fitting Hose</h3>
+      <p>Comprehensive solutions for industrial pipe fittings and connections.</p>
+    </div>
+     <div class="product">
+      <img src="images/GIpipes.jpg" alt="GI Pipes">
+      <h3>GI & Pipes</h3>
+      <p>Widely used in various applications, including plumbing, water supply systems, construction, and even agriculture.</p>
+    </div>
+     <div class="product">
+      <img src="images/Reducer.jpg" alt="Fitting House">
+      <h3>Reducer</h3>
+      <p>Designed to reduce incoming water or steam pressure to a safer constant predetermined downstream level.</p>
+    </div>
+     <div class="product">
+      <img src="images/Coupling.jpeg" alt="Fitting House">
+      <h3>Coupling</h3>
+      <p>Pipe coupling is a fitting that connects two pipes together, creating a safe and leak-proof connection.</p>
+    </div>
+     <div class="product">
+      <img src="images/Elbow.jpg" alt="Fitting House">
+      <h3>Elbow</h3>
+      <p>An Elbow is a pipe fitting used to change the direction of the fluid flow.</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <h2>Industrial Consumables & Tools</h2>
+  <div class="products">
+    <div class="product">
+      <img src="images/Welding.jpeg" alt="Welding Consumables">
+      <h3>Welding Consumables</h3>
+      <p>Essential for welding joints in fabrication and construction industries.</p>
+    </div>
+     <div class="product">
+      <img src="images/DrillandTaps.jpg" alt="Filler Wire">
+      <h3>Drills & Taps</h3>
+      <p>A drill is a tool used for making round holes or driving fasteners.</p>
+    </div>
+    <div class="product">
+      <img src="images/Boring.png" alt="Boring Holder">
+      <h3>Boring Holder</h3>
+      <p>Tool holder for precision machining operations in CNC and lathe machines.</p>
+    </div>
+    <div class="product">
+      <img src="images/Jaw.png" alt="Jaw Chuck">
+      <h3>Jaw Chuck</h3>
+      <p>Workholding device for lathe and milling machines. Ensures stable rotation.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Fasteners & Hardware</h2>
+  <div class="products">
+    <div class="product">
+      <img src="images/Washer.png" alt="Washer">
+      <h3>Washer</h3>
+      <p>Used to distribute load and prevent wear in fastened joints. Common in all assemblies.</p>
+    </div>
+    <div class="product">
+      <img src="images/Fasteners.png" alt="Fasteners">
+      <h3>Fasteners</h3>
+      <p>Bolts, nuts, and screws for construction, manufacturing, and machinery assembly.</p>
+    </div>
+    <div class="product">
+      <img src="images/Rivets.png" alt="Rivets">
+      <h3>Rivets</h3>
+      <p>Permanent fasteners for joining sheets in automotive, aerospace, and structures.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <h2 style="color: #ff6f00;">Contact Us</h2>
+  <p>Email: deltaenterprise.mumbai@gmail.com</p>
+  <p>Irfan Jagda - 8454070965</p>
+  <p>Mohammed Jagda - 7700072367</p>
+</footer>
+
+<div class="print-footer">
+  Email: deltaenterprise.mumbai@gmail.com &nbsp;|&nbsp; 8454070965 &nbsp;|&nbsp; 7700072367
+</div>
+
+</body>
+</html>

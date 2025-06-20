@@ -6,7 +6,7 @@
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #1f1f1f;
+      background-color: white; /*#1f1f1f*/
       color: #fff;
       margin: 0;
       padding: 0;
@@ -33,12 +33,12 @@
 
 
     header, footer {
-     background-color:#121212;
+     background-color:	#2a2f36;
       text-align: center;
       padding: 20px 0;
     }
 
-
+   
 
     h1, h2 {
       color: #ff6f00;
@@ -87,11 +87,15 @@
 
     .product p {
       font-size: 0.9em;
-      color: #ccc;
+      color: black; /*#ccc*/
     }
 
     footer p {
       color: #bbb;
+    }
+
+    .print-footer {
+      display: none;
     }
 
 @media print {
@@ -188,9 +192,9 @@
     color: #000;
   }
 
-  footer {
+  /*footer {
     display: none !important;
-  }
+  }*/
 
   .print-footer {
     position: fixed;
@@ -206,7 +210,7 @@
     padding-top: 4px;
     z-index: 9999;
     -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
+    print-color-adjust: exact;  
   }
    .no-print {
     display: none !important;
@@ -235,7 +239,7 @@
   </div>
 </header>
 
-<section class="section no-print" id="about-us">
+<section class="section no-print" id="about-us" style="color: #000;">
   <h2>About Us</h2>
   <p>
     <strong>Delta Enterprise</strong> is a trusted supplier of high-quality industrial solutions, specializing in
@@ -264,6 +268,11 @@
       <img src="images/Ball.png" alt="Ball Valve">
       <h3>Ball Valve</h3>
       <p>High-performance valve for flow control in pipelines. Used in oil & gas, water treatment.</p>
+    </div>
+     <div class="product">
+      <img src="images/Trunnion.jpg" alt="Trunnion Ball Valve">
+      <h3>Trunnion Mounted Ball Valve</h3>
+      <p>A trunnion-mounted ball valve is a type of quarter-turn valve used to control the flow of media in pipelines.</p>
     </div>
     <div class="product">
       <img src="images/Globe.png" alt="Globe Valve">
@@ -443,8 +452,8 @@
 </section>
 
 <footer>
-  <h2 style="color: #ff6f00;">Contact Us</h2>
-  <p>Email: deltaenterprise.mumbai@gmail.com</p>
+  <h2>Contact Us</h2>
+  <p >Email: deltaenterprise.mumbai@gmail.com</p>
   <p>Irfan Jagda - 8454070965</p>
   <p>Mohammed Jagda - 7700072367</p>
 </footer>
